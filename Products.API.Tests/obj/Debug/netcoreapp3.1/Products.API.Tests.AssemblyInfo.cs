@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("Products.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\turka\\source\\repos\\kişisel\\Makale\\RESTApi\\TestAPIUsingWebApplicationFact" +
-    "ory\\TestAPIUsingWebApplicationFactory", "Products.API.csproj", "0")]
+    "ory\\Products.API", "Products.API.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Products.API.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

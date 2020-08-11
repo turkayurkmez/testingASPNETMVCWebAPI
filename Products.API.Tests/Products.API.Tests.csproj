@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\TestAPIUsingWebApplicationFactory\Products.API.csproj" />
+    <ProjectReference Include="..\Products.API\Products.API.csproj" />
   </ItemGroup>
 
 </Project>

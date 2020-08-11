@@ -6803,8 +6803,8 @@
     },
     "Products.API/1.0.0": {
       "type": "project",
-      "path": "../TestAPIUsingWebApplicationFactory/Products.API.csproj",
-      "msbuildProject": "../TestAPIUsingWebApplicationFactory/Products.API.csproj"
+      "path": "../Products.API/Products.API.csproj",
+      "msbuildProject": "../Products.API/Products.API.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6848,8 +6848,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\turka\\source\\repos\\kişisel\\Makale\\RESTApi\\TestAPIUsingWebApplicationFactory\\TestAPIUsingWebApplicationFactory\\Products.API.csproj": {
-              "projectPath": "C:\\Users\\turka\\source\\repos\\kişisel\\Makale\\RESTApi\\TestAPIUsingWebApplicationFactory\\TestAPIUsingWebApplicationFactory\\Products.API.csproj"
+            "C:\\Users\\turka\\source\\repos\\kişisel\\Makale\\RESTApi\\TestAPIUsingWebApplicationFactory\\Products.API\\Products.API.csproj": {
+              "projectPath": "C:\\Users\\turka\\source\\repos\\kişisel\\Makale\\RESTApi\\TestAPIUsingWebApplicationFactory\\Products.API\\Products.API.csproj"
             }
           }
         }

@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\turka\\source\\repos\\kişisel\\Makale\\RESTApi\\TestAPIUsingWebApplicationFactory\\TestAPIUsingWebApplicationFactory\\Products.API.csproj": {
-                "projectPath": "C:\\Users\\turka\\source\\repos\\kişisel\\Makale\\RESTApi\\TestAPIUsingWebApplicationFactory\\TestAPIUsingWebApplicationFactory\\Products.API.csproj"
+              "C:\\Users\\turka\\source\\repos\\kişisel\\Makale\\RESTApi\\TestAPIUsingWebApplicationFactory\\Products.API\\Products.API.csproj": {
+                "projectPath": "C:\\Users\\turka\\source\\repos\\kişisel\\Makale\\RESTApi\\TestAPIUsingWebApplicationFactory\\Products.API\\Products.API.csproj"
               }
             }
           }
@@ -92,14 +92,14 @@
         }
       }
     },
-    "C:\\Users\\turka\\source\\repos\\kişisel\\Makale\\RESTApi\\TestAPIUsingWebApplicationFactory\\TestAPIUsingWebApplicationFactory\\Products.API.csproj": {
+    "C:\\Users\\turka\\source\\repos\\kişisel\\Makale\\RESTApi\\TestAPIUsingWebApplicationFactory\\Products.API\\Products.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\turka\\source\\repos\\kişisel\\Makale\\RESTApi\\TestAPIUsingWebApplicationFactory\\TestAPIUsingWebApplicationFactory\\Products.API.csproj",
+        "projectUniqueName": "C:\\Users\\turka\\source\\repos\\kişisel\\Makale\\RESTApi\\TestAPIUsingWebApplicationFactory\\Products.API\\Products.API.csproj",
         "projectName": "Products.API",
-        "projectPath": "C:\\Users\\turka\\source\\repos\\kişisel\\Makale\\RESTApi\\TestAPIUsingWebApplicationFactory\\TestAPIUsingWebApplicationFactory\\Products.API.csproj",
+        "projectPath": "C:\\Users\\turka\\source\\repos\\kişisel\\Makale\\RESTApi\\TestAPIUsingWebApplicationFactory\\Products.API\\Products.API.csproj",
         "packagesPath": "C:\\Users\\turka\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\turka\\source\\repos\\kişisel\\Makale\\RESTApi\\TestAPIUsingWebApplicationFactory\\TestAPIUsingWebApplicationFactory\\obj\\",
+        "outputPath": "C:\\Users\\turka\\source\\repos\\kişisel\\Makale\\RESTApi\\TestAPIUsingWebApplicationFactory\\Products.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
