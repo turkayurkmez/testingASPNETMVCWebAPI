@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using TestAPIUsingWebApplicationFactory.Models;
+using Products.API.Models;
 
-namespace TestAPIUsingWebApplicationFactory.Services
+namespace Products.API.Services
 {
     public interface IProductService
     {

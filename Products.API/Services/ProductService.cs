@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
-using TestAPIUsingWebApplicationFactory.Data;
-using TestAPIUsingWebApplicationFactory.Models;
+using Products.API.Data;
+using Products.API.Models;
 
-namespace TestAPIUsingWebApplicationFactory.Services
+namespace Products.API.Services
 {
     public class ProductService : IProductService
     {

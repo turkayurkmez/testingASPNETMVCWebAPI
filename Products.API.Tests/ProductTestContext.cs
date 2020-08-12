@@ -1,17 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
-using TestAPIUsingWebApplicationFactory.Data;
-using TestAPIUsingWebApplicationFactory.Models;
+using Products.API.Data;
+using Products.API.Models;
 
 namespace Products.API.Tests
 {
-   public class ProductTestContext : ProductDbContext
+    public class ProductTestContext : ProductDbContext
     {
-        public ProductTestContext(DbContextOptions<ProductDbContext> options):base(options)
+        public ProductTestContext(DbContextOptions<ProductDbContext> options) : base(options)
         {
 
         }
@@ -22,7 +19,7 @@ namespace Products.API.Tests
             seedData<Product>(modelBuilder, "../../../data/products.json");
         }
 
-        private void seedData<T>(ModelBuilder modelBuilder, string file) where T:class
+        private void seedData<T>(ModelBuilder modelBuilder, string file) where T : class
         {
             using (StreamReader reader = new StreamReader(file))
             {

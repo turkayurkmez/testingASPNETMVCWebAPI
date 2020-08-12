@@ -1,4 +1,3 @@
-using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using System;
 using System.Diagnostics;
@@ -6,13 +5,13 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using TestAPIUsingWebApplicationFactory;
-using TestAPIUsingWebApplicationFactory.Models;
+using Products.API;
+using Products.API.Models;
 using Xunit;
 
 namespace Products.API.Tests
 {
-    public class ProductsControllerTest: IClassFixture<InMemoryWebApplicationFactory<Startup>>
+    public class ProductsControllerTest : IClassFixture<InMemoryWebApplicationFactory<Startup>>
     {
         private InMemoryWebApplicationFactory<Startup> factory;
 
@@ -23,17 +22,17 @@ namespace Products.API.Tests
         [Fact]
         public async Task web_api_basari_testi()
         {
-            var client =  factory.CreateClient();
+            var client = factory.CreateClient();
             var response = await client.GetAsync("/api/products");
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
-        
+
         }
 
         Uri headerLocation = null;
         [Fact]
-       
+
         public async Task post_request_test()
         {
             var product = new Product
@@ -45,7 +44,7 @@ namespace Products.API.Tests
 
             var client = factory.CreateClient();
             var httpContent = new StringContent(JsonConvert.SerializeObject(product), Encoding.UTF8, "application/json");
-            var response  = await client.PostAsync("/api/products", httpContent);
+            var response = await client.PostAsync("/api/products", httpContent);
 
             Assert.Equal(HttpStatusCode.Created, response.StatusCode);
             Assert.NotNull(response.Headers.Location);
@@ -69,7 +68,7 @@ namespace Products.API.Tests
         {
             var client = factory.CreateClient();
             var response = await client.GetAsync("/api/products/1");
-            var strinResult = await  response.Content.ReadAsStringAsync();
+            var strinResult = await response.Content.ReadAsStringAsync();
             var jsonObject = JsonConvert.DeserializeObject<Product>(strinResult);
             Assert.Equal("12,0", jsonObject.Price.ToString());
         }

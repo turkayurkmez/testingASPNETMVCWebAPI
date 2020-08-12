@@ -4,10 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using TestAPIUsingWebApplicationFactory.Data;
-using TestAPIUsingWebApplicationFactory.Services;
+using Products.API.Data;
+using Products.API.Services;
 
-namespace TestAPIUsingWebApplicationFactory
+namespace Products.API
 {
     public class Startup
     {

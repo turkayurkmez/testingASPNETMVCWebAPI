@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TestAPIUsingWebApplicationFactory.Models;
-using TestAPIUsingWebApplicationFactory.Services;
+using Products.API.Models;
+using Products.API.Services;
 
-namespace TestAPIUsingWebApplicationFactory.Controllers
+namespace Products.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

@@ -3,14 +3,11 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using TestAPIUsingWebApplicationFactory.Data;
+using Products.API.Data;
 
 namespace Products.API.Tests
 {
-    public class InMemoryWebApplicationFactory<T>: WebApplicationFactory<T> where T:class
+    public class InMemoryWebApplicationFactory<T> : WebApplicationFactory<T> where T : class
     {
         protected override void ConfigureWebHost(IWebHostBuilder builder)
         {
@@ -24,7 +21,7 @@ namespace Products.API.Tests
                        var serviceProvider = services.BuildServiceProvider();
                        using var scope = serviceProvider.CreateScope();
                        var scopedService = scope.ServiceProvider;
-                       var db =scopedService.GetRequiredService<ProductDbContext>();
+                       var db = scopedService.GetRequiredService<ProductDbContext>();
                        db.Database.EnsureCreated();
 
                    });

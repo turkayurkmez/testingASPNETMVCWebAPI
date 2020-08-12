@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TestAPIUsingWebApplicationFactory.Models;
+using Products.API.Models;
 
-namespace TestAPIUsingWebApplicationFactory.Data
+namespace Products.API.Data
 {
     public class ProductDbContext : DbContext
     {

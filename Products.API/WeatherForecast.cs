@@ -1,6 +1,6 @@
 using System;
 
-namespace TestAPIUsingWebApplicationFactory
+namespace Products.API
 {
     public class WeatherForecast
     {

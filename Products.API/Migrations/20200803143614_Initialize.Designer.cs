@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using TestAPIUsingWebApplicationFactory.Data;
+using Products.API.Data;
 
-namespace TestAPIUsingWebApplicationFactory.Migrations
+namespace Products.API.Migrations
 {
     [DbContext(typeof(ProductDbContext))]
     [Migration("20200803143614_Initialize")]
@@ -20,7 +20,7 @@ namespace TestAPIUsingWebApplicationFactory.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("TestAPIUsingWebApplicationFactory.Models.Product", b =>
+            modelBuilder.Entity("Products.API.Models.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

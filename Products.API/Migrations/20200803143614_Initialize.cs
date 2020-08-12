@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace TestAPIUsingWebApplicationFactory.Migrations
+namespace Products.API.Migrations
 {
     public partial class Initialize : Migration
     {
