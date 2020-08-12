@@ -1,5 +1,7 @@
+using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using System;
+using System.Diagnostics;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -26,8 +28,12 @@ namespace Products.API.Tests
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
+        
         }
+
+        Uri headerLocation = null;
         [Fact]
+       
         public async Task post_request_test()
         {
             var product = new Product
@@ -42,6 +48,30 @@ namespace Products.API.Tests
             var response  = await client.PostAsync("/api/products", httpContent);
 
             Assert.Equal(HttpStatusCode.Created, response.StatusCode);
+            Assert.NotNull(response.Headers.Location);
+            headerLocation = response.Headers.Location;
+            Debug.WriteLine(headerLocation.PathAndQuery);
+
+        }
+        [Fact]
+        public async Task put_request_test()
+        {
+            var client = factory.CreateClient();
+            var request = new Product { Name = "X", Price = 100, Stock = 10 };
+            var httpContent = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
+            //Assert.NotNull(headerLocation.PathAndQuery);
+            var response = await client.PutAsync("api/products/5", httpContent);
+
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+        }
+        [Fact]
+        public async Task get_by_id_request_test()
+        {
+            var client = factory.CreateClient();
+            var response = await client.GetAsync("/api/products/1");
+            var strinResult = await  response.Content.ReadAsStringAsync();
+            var jsonObject = JsonConvert.DeserializeObject<Product>(strinResult);
+            Assert.Equal("12,0", jsonObject.Price.ToString());
         }
     }
 }

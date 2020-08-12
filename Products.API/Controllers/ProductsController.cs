@@ -34,7 +34,7 @@ namespace TestAPIUsingWebApplicationFactory.Controllers
                 return BadRequest($"{id} id'li eleman yok.");
             }
             existingProduct.Id = id;
-            return Ok(productService.Edit(product));
+            return Ok(productService.Edit(existingProduct));
 
         }
         [HttpPost]

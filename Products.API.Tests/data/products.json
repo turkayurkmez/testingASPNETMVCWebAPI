@@ -1,0 +1,21 @@
+[
+  {
+    "Id": 1,
+    "Name": "Test Ürünü A",
+    "Price": 12.0,
+    "Stock": 1000
+  },
+  {
+    "Id": 2,
+    "Name": "Test Ürünü B",
+    "Price": 8.0,
+    "Stock": 1000
+  },
+  {
+    "Id": 3,
+    "Name": "Test Ürünü C",
+    "Price": 8.0,
+    "Stock": 1000
+
+  }
+]

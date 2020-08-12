@@ -19,9 +19,12 @@ namespace Products.API.Tests
                    {
                        var options = new DbContextOptionsBuilder<ProductDbContext>()
                                                               .UseInMemoryDatabase("testMemory").Options;
+                       services.AddScoped<ProductDbContext>(provider => new ProductTestContext(options));
 
                        var serviceProvider = services.BuildServiceProvider();
-                       var db =serviceProvider.GetRequiredService<ProductDbContext>();
+                       using var scope = serviceProvider.CreateScope();
+                       var scopedService = scope.ServiceProvider;
+                       var db =scopedService.GetRequiredService<ProductDbContext>();
                        db.Database.EnsureCreated();
 
                    });
