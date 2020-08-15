@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Linq;
 using Products.API.Data;
 using Products.API.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Products.API.Services
 {

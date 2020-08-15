@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
-using System.IO;
 using Products.API.Data;
 using Products.API.Models;
+using System.IO;
 
 namespace Products.API.Tests
 {
@@ -27,7 +27,6 @@ namespace Products.API.Tests
                 var data = JsonConvert.DeserializeObject<T[]>(json);
                 modelBuilder.Entity<T>().HasData(data);
             }
-
 
         }
     }

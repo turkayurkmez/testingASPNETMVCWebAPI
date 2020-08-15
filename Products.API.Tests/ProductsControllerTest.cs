@@ -1,12 +1,9 @@
 using Newtonsoft.Json;
-using System;
-using System.Diagnostics;
+using Products.API.Models;
 using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Products.API;
-using Products.API.Models;
 using Xunit;
 
 namespace Products.API.Tests
@@ -26,13 +23,10 @@ namespace Products.API.Tests
             var response = await client.GetAsync("/api/products");
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-
-
         }
 
-        Uri headerLocation = null;
-        [Fact]
 
+        [Fact]
         public async Task post_request_test()
         {
             var product = new Product
@@ -48,8 +42,6 @@ namespace Products.API.Tests
 
             Assert.Equal(HttpStatusCode.Created, response.StatusCode);
             Assert.NotNull(response.Headers.Location);
-            headerLocation = response.Headers.Location;
-            Debug.WriteLine(headerLocation.PathAndQuery);
 
         }
         [Fact]
@@ -67,10 +59,10 @@ namespace Products.API.Tests
         public async Task get_by_id_request_test()
         {
             var client = factory.CreateClient();
-            var response = await client.GetAsync("/api/products/1");
+            var response = await client.GetAsync("/api/products/3");
             var strinResult = await response.Content.ReadAsStringAsync();
             var jsonObject = JsonConvert.DeserializeObject<Product>(strinResult);
-            Assert.Equal("12,0", jsonObject.Price.ToString());
+            Assert.Equal("750", jsonObject.Stock.ToString());
         }
     }
 }

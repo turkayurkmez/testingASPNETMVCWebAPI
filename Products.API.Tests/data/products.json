@@ -8,14 +8,14 @@
   {
     "Id": 2,
     "Name": "Test Ürünü B",
-    "Price": 8.0,
-    "Stock": 1000
+    "Price": 10.0,
+    "Stock": 1500
   },
   {
     "Id": 3,
     "Name": "Test Ürünü C",
     "Price": 8.0,
-    "Stock": 1000
+    "Stock": 750
 
   }
 ]

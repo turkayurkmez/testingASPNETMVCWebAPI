@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using Products.API.Models;
+﻿using Products.API.Models;
+using System.Collections.Generic;
 
 namespace Products.API.Services
 {
@@ -10,7 +10,6 @@ namespace Products.API.Services
         Product Add(Product product);
         Product Edit(Product product);
         Product Delete(int id);
-
 
     }
 }
